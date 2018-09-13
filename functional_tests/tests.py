@@ -9,14 +9,14 @@ import time
 
 class NewVisitorTest(StaticLiveServerTestCase):
 
-    # SERVER_URL = 'garycn.net'
+    SERVER_URL = 'garycn.net'
 
     @classmethod
     def setUpClass(cls):
         # for arg in sys.argv:
         #     if 'liveserver' in arg:
 
-        if 'SERVER_URL' in dir():
+        if 'SERVER_URL' in dir(cls):
             # cls.server_url = 'http://' + arg.split('=')[1]
             cls.server_url = 'http://' + cls.SERVER_URL
             return
